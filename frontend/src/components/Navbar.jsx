@@ -30,6 +30,8 @@ const Navbar = () => {
     logoutUser(navigate, setTotalItem);
   };
 
+  console.log(user);
+
   return (
     <>
       {/* <div>Navbar</div> */}
@@ -97,6 +99,26 @@ const Navbar = () => {
                     <>
                       <DropdownMenuItem onClick={() => navigate("/orders")}>
                         Your Orders
+                      </DropdownMenuItem>
+
+                      {user && user.role === "admin" && (
+                        <DropdownMenuItem
+                          onClick={() => navigate("/admin/dashboard")}
+                        >
+                          Dashboard
+                        </DropdownMenuItem>
+                      )}
+
+                      {/* Notifications will be implemented using RabbitMQ later  */}
+                      <DropdownMenuItem>
+                        Notifications
+                      </DropdownMenuItem>
+
+                      {/* Favourites/ to mark a product as favourite will be implemented later */}
+
+                      <DropdownMenuItem>
+                      
+                        Favourites
                       </DropdownMenuItem>
 
                       <DropdownMenuItem onClick={logoutHandler}>

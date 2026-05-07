@@ -54,6 +54,7 @@ import Payment from "./pages/Payment.jsx";
 import OrderProcessing from "./pages/OrderProcessing.jsx";
 import Orders from "./pages/Orders.jsx";
 import OrderPage from "./pages/OrderPage.jsx";
+import AdminDashboard from "./pages/AdminDashboard.jsx";
 
 const App = () => {
   const { isAuth, loading } = UserData();
@@ -73,7 +74,15 @@ const App = () => {
             <Route path="/product/:id" element={<ProductPage />} />
             <Route path="/cart" element={isAuth ? <Cart /> : <Login />} />
             <Route path="/orders" element={isAuth ? <Orders /> : <Login />} />
-            <Route path="/order/:id" element={isAuth ? <OrderPage /> : <Login />} />
+            <Route
+              path="/order/:id"
+              element={isAuth ? <OrderPage /> : <Login />}
+            />
+
+            <Route
+              path="/admin/dashboard"
+              element={isAuth ? <AdminDashboard /> : <Login />}
+            />
 
             <Route
               path="/checkout"

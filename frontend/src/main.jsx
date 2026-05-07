@@ -11,6 +11,16 @@ import { CartProvider } from './context/CartContext.jsx';
 // backend server url
 export const server = "http://localhost:5000";
 
+export const categories = [
+  "Earphones",
+  "gaming",
+  "laptop",
+  "phones",
+  "shoes",
+
+  
+];
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
   <ThemeProvider>

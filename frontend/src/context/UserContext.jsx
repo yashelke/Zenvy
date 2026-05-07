@@ -109,6 +109,7 @@ export const UserProvider = ({children}) =>
             });
 
             setIsAuth(true);
+            // setUser(data.user);
             setUser(data.user);
             setLoading(false);
 
