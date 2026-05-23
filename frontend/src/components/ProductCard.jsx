@@ -89,7 +89,9 @@ const ProductCard = ({ product, latest }) => {
                 </div>
 
                 <div className="space-y-3 p-3 sm:p-4">
-                    <h3 className="line-clamp-2 text-sm font-semibold sm:text-base">
+                    {/* <h3 className="line-clamp-2 text-sm font-semibold sm:text-base"> */}
+                                        <h3 className="line-clamp-1 text-sm font-semibold sm:text-base">
+
                         {product.title}
                     </h3>
                     <p className="line-clamp-2 text-xs text-muted-foreground sm:text-sm">
